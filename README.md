@@ -17,7 +17,7 @@ A **lightweight and customizable image slider** built with **vanilla JavaScript*
 ##  Installation
 
 Clone this repository:
-git clone https://github.com/ArtemSotnikov/HomeWork2024/home-work-28.git
+git clone https://github.com/ArtemSotnikov/HomeWork/tree/240f9c9c6e469e0451b71b2365a41b17d78aba49/home-work-28
 
 Open **index.html** in a browser to see it in action.
 
