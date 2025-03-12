@@ -1,82 +1,42 @@
 # Simple JavaScript Slider
 
-A lightweight and customizable image slider built with vanilla JavaScript, HTML, and CSS.
+A **lightweight and customizable image slider** built with **vanilla JavaScript**, **HTML**, and **CSS**. It supports several sliders at one web page (default 2 slider). Possible navigation via buttons, key arrows, touch, and auto-play.
 
-## Demo
+## Preview
 
-![Slider Preview](assets/images/1.jpg)  
-*(Replace with an actual GIF or screenshot of your slider in action.)*
+![Slider](https://github.com/user-attachments/assets/f9f67b84-8c11-44d4-90a2-3f9bd20e14b0)
 
 ## Features
 
-✅ Image sliding with navigation buttons  
-✅ Keyboard arrow navigation  
-✅ Swipe support for mobile devices  
-✅ Auto-play functionality  
-✅ Customizable styles and settings  
+-  **Image sliding** in both directions with navigation buttons/bars  
+-  **Keyboard arrow navigation**  
+-  **Touch and swipe support** for mobile devices  
+-  **Auto-play functionality**  
+-  **Customizable styles and settings**: number of slides, sliding time, navigation bars coloros   
 
-## Installation
+##  Installation
 
-1. Clone this repository:
-   ```sh
-   git clone https://github.com/yourusername/your-slider-repo.git
+Clone this repository:
+git clone https://github.com/ArtemSotnikov/HomeWork2024/home-work-28.git
 
-    Navigate to the project folder:
+Open **index.html** in a browser to see it in action.
 
-    cd your-slider-repo
+## Usage
 
-    Open index.html in a browser.
+The slider is instantiated in main.js. By default, it creates two sliders with different settings.<br/>
+The slider creates image containers dynamically based on the imageLinks array.<br/>
+Navigation controls are generated, including left/right arrows and bullets for slide selection.<br/>
+In **.css** number of slides need to be specified, if number of images > 6: _grid-template-columns: repeat(6, 100%);_
 
-Usage
+## Slider reposidtory structure
 
-The slider is instantiated in main.js. By default, it creates two sliders with different settings:
-
-import {Slider} from "./Slider.js";
-
-const slider = new Slider({
-    barsColor: "dimgrey" // Default slider with minimal customization
-});
-
-const sliderDuplicate = new Slider({
-    sliderID:   "dupl_slider",
-    slideTime: 4,  // Each slide lasts 4 seconds
-    imageLinks: [
-        "assets/images_add/1.jpg",
-        "assets/images_add/2.jpg",
-        "assets/images_add/3.jpg",
-        "assets/images_add/4.jpg",
-        "assets/images_add/5.jpg",
-        "assets/images_add/6.jpg"
-    ],
-    barsColor: "red",
-    barsHoverColor: "orange"
-});
-
-Customization
-
-You can customize the slider by passing an object with the following properties:
-Property	Type	Default Value	Description
-sliderID	String	"orig_slider"	The ID of the container element
-slideTime	Number	1 (second)	Time per slide in autoplay mode
-imageLinks	Array	["assets/images/1.jpg", "assets/images/2.jpg", ...]	List of image URLs
-barsColor	String	"dimgrey"	Background color of navigation bars
-barsHoverColor	String	"lightgrey"	Hover color of navigation bars
-Controls
-Action	Control Method
-Next slide	Click → button, right arrow key, or swipe left
-Previous slide	Click ← button, left arrow key, or swipe right
-Auto-play Start/Stop	Click the play/pause button
-Direct image selection	Click on the navigation bullets
-File Structure
-
-📂 your-slider-repo
- ├── 📂 assets
- │   ├── 📂 images
- │   ├── 📂 images_add
- │   ├── 📂 styles
- │   │   ├── normalize.css
- │   │   ├── style.css
- ├── index.html
- ├── Slider.js
- ├── main.js
- ├── README.md
+├── assets/<br/>
+│&nbsp;&nbsp;&nbsp;&nbsp;├── images/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Default images<br/>
+│&nbsp;&nbsp;&nbsp;&nbsp;├── images_add/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Additional images for slider<br/>
+│&nbsp;&nbsp;&nbsp;&nbsp;├── styles/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# CSS stylesheets<br/>
+│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── normalize.css<br/>
+│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── style.css<br/>
+├── index.html&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# HTML page to load the slider<br/>
+├── Slider.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# JavaScript logic for the slider<br/>
+├── main.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Initializes the sliders and sets custom options<br/>
+├── README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This file<br/>
