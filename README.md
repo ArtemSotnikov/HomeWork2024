@@ -1,42 +1,73 @@
-# Simple JavaScript Slider
+# ️ Dummy Frontend Project to build Gulp environment
+---
 
-A **lightweight and customizable image slider** built with **vanilla JavaScript**, **HTML**, and **CSS**. It supports several sliders at one web page (default 2 slider). Possible navigation via buttons, key arrows, touch, and auto-play.
+##  Installation of required tools
 
-## Preview
+### Node.js & npm
 
-![Slider](https://github.com/user-attachments/assets/f9f67b84-8c11-44d4-90a2-3f9bd20e14b0)
+Install Node.js (with npm) from the official website (LTS version):  
 
-## Features
+https://nodejs.org
 
--  **Image sliding** in both directions with navigation buttons/bars  
--  **Keyboard arrow navigation**  
--  **Touch and swipe support** for mobile devices  
--  **Auto-play functionality**  
--  **Customizable styles and settings**: number of slides, sliding time, navigation bars coloros   
+To check the installation and versions write in the command line:
 
-##  Installation
+`node -v`  
+`npm -v`
 
-Clone this repository:
-git clone https://github.com/ArtemSotnikov/HomeWork/tree/240f9c9c6e469e0451b71b2365a41b17d78aba49/home-work-28
+---
 
-Open **index.html** in a browser to see it in action.
+## Installinf the package with GULP
 
-## Usage
+1. **Clone/download the repository in your working folder**:
 
-The slider is instantiated in main.js. By default, it creates two sliders with different settings.<br/>
-The slider creates image containers dynamically based on the imageLinks array.<br/>
-Navigation controls are generated, including left/right arrows and bullets for slide selection.<br/>
-In **.css** number of slides need to be specified, if number of images > 6: _grid-template-columns: repeat(6, 100%);_
+In Git Bash write:
 
-## Slider reposidtory structure
+`git clone https://github.com/your-username/your-repo-name.git`
+`cd your-repository`
 
-├── assets/<br/>
-│&nbsp;&nbsp;&nbsp;&nbsp;├── images/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Default images<br/>
-│&nbsp;&nbsp;&nbsp;&nbsp;├── images_add/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Additional images for slider<br/>
-│&nbsp;&nbsp;&nbsp;&nbsp;├── styles/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# CSS stylesheets<br/>
-│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── normalize.css<br/>
-│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── style.css<br/>
-├── index.html&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# HTML page to load the slider<br/>
-├── Slider.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# JavaScript logic for the slider<br/>
-├── main.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Initializes the sliders and sets custom options<br/>
-├── README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This file<br/>
+2. **Install required dependencies**:
+
+In command line write:
+`npm install`
+
+This will install following packages:
+- Gulp
+- SCSS engine
+- PostCSS and Autoprefixer
+- CSSNano (for .min.css)
+- Media Query sorter
+- BrowserSync (real time update of the web page)
+
+---
+
+## Run the Project (Development Mode)
+In command line write:  
+`gulp watch`
+
+This will:
+- Convert .scss to .min.css
+- Add prefixes for different browsers in .min.css
+- Optimize media queries from .scss in resulting .min.css
+- Generate source maps in browser (.css and .scss for debugging purposes)
+- Watch for changes in `.scss`, `.html`, and `.js` files
+- Update live the browser without manual reloading
+
+---
+
+## Project Structure
+
+
+ your-repository/  
+├── assets/  
+│   └── css/       
+│       └── style.min.css  
+├── src/              
+│   └── style.scss  
+├── index.html  
+├── gulpfile.js  
+├── script.js
+├── package.json  
+└── README.md  
+
+
+---
