@@ -59,13 +59,12 @@ This will:
 
  your-repository/  
 ├── assets/  
-│   └── css/       
-│       └── style.min.css  
+│   └── css/style.min.css   
 ├── src/              
 │   └── style.scss  
 ├── index.html  
 ├── gulpfile.js  
-├── script.js
+├── script.js  
 ├── package.json  
 └── README.md  
 
